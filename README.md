@@ -19,7 +19,6 @@ Create cache mode
 
 The following is an example from an normal type game, the game contains users, properties, families and other assocating data. The data structure looks like:
 
-<code>
 Create Table `user` (
   user_id int not null primary key auto _increment,
   nickname varchar(20) not null,
@@ -43,7 +42,6 @@ Create table family (
 Create table family_user (
   family_id int not null,
   user_id int not null) Engine = InnoDb;
-</code>
 
 Our purpose is caching all information about the user when an user login, so that:
 mysql> create cache login_user(user _id)
